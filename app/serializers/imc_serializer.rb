@@ -1,3 +1,3 @@
 class ImcSerializer < ActiveModel::Serializer
-  attributes :id, :name, :age, :height, :weight, :imc, :classification, :obesity
+  attributes :id, :name, :age, :height, :weight
 end

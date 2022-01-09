@@ -46,6 +46,6 @@ class ImcsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def imc_params
-      params.require(:imc).permit(:name, :age, :height, :weight, :imc, :classification, :obesity)
+      params.require(:imc).permit(:name, :age, :height, :weight)
     end
 end

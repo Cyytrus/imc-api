@@ -10,21 +10,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_09_030701) do
+ActiveRecord::Schema.define(version: 2022_01_09_111434) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "imc_calculations", force: :cascade do |t|
+    t.bigint "imc_id", null: false
+    t.float "weight"
+    t.float "height"
+    t.float "imc"
+    t.string "classification"
+    t.integer "obesity"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["imc_id"], name: "index_imc_calculations_on_imc_id"
+  end
 
   create_table "imcs", force: :cascade do |t|
     t.string "name"
     t.integer "age"
     t.float "height"
     t.float "weight"
-    t.float "imc"
-    t.string "classification"
-    t.integer "obesity"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "imc_calculations", "imcs"
 end

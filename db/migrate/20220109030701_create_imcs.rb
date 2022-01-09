@@ -5,9 +5,6 @@ class CreateImcs < ActiveRecord::Migration[6.1]
       t.integer :age
       t.float :height
       t.float :weight
-      t.float :imc
-      t.string :classification
-      t.integer :obesity
 
       t.timestamps
     end
