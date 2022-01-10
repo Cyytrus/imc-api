@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
-  resources :imcs
+  
+  namespace :api do
+    namespace :v1 do
+      resources :imcs do
+        resources :imc_calculations
+      end
+    end
+  end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

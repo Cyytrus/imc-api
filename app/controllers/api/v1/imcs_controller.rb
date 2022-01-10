@@ -1,11 +1,11 @@
-class ImcsController < ApplicationController
+class Api::V1::ImcsController < ApplicationController
   before_action :set_imc, only: [:show, :update, :destroy]
 
   # GET /imcs
   def index
     @imcs = Imc.all
 
-    render json: @imcs
+    render json: @imcs.includes(:imc_calculations)
   end
 
   # GET /imcs/1

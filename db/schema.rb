@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2022_01_09_111434) do
     t.float "weight"
     t.float "height"
     t.float "imc"
-    t.string "classification"
+    t.string "description"
     t.integer "obesity"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

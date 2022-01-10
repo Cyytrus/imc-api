@@ -5,7 +5,7 @@ class CreateImcCalculations < ActiveRecord::Migration[6.1]
       t.float :weight
       t.float :height
       t.float :imc
-      t.string :classification
+      t.string :description
       t.integer :obesity
 
       t.timestamps
