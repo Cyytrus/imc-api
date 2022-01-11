@@ -1,24 +1,31 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This API was built to give a fast imc calculus and return the imc classification and obesity degree ( if overweight ) after receiving height and weight values.
 
-Things you may want to cover:
+Look into [Gemfile](./Gemfile) file for more gem's details.
 
 * Ruby version
 
-* System dependencies
+      3.0.2
 
-* Configuration
+* Rails version
 
-* Database creation
+      6.1.4
+
+* PostgreSQL
+
+      1.1
 
 * Database initialization
 
+      $ rails db:create db:migrate
+
 * How to run the test suite
+
+      $ rspec
 
 * Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+    `Imc calculus`
 
-* ...
+
