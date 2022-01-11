@@ -24,7 +24,7 @@ Look into [Gemfile](./Gemfile) file for more gem's details.
 
       $ rspec
 
-* Services (job queues, cache servers, search engines, etc.)
+* Services
 
     `Imc calculus`
 
