@@ -38,6 +38,12 @@ class Api::V1::ImcsController < ApplicationController
     @imc.destroy
   end
 
+  def imc
+    calculated_imc = Imc.calculation(params["height"], params["weight"])
+    render json: calculated_imc
+  end
+  
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_imc

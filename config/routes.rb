@@ -3,7 +3,11 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :imcs do
-        resources :imc_calculations
+        collection do 
+          post :imc
+        end
+        #resources :ic_calculations
+      #endm
       end
     end
   end
