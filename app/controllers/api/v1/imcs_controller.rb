@@ -5,7 +5,7 @@ class Api::V1::ImcsController < ApplicationController
   def index
     @imcs = Imc.all
 
-    render json: @imcs.includes(:imc_calculations)
+    render json: @imcs
   end
 
   # GET /imcs/1
@@ -39,7 +39,7 @@ class Api::V1::ImcsController < ApplicationController
   end
 
   def imc
-    calculated_imc = Imc.calculation(params["height"], params["weight"])
+    calculated_imc = Imc.calculation(params["weight"], params["height"]) 
     render json: calculated_imc
   end
   
